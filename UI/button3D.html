@@ -1,0 +1,55 @@
+<!--
+To change this template use Tools | Templates.
+-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>button3D</title>
+    <style>
+        body{font-size: 2em;}
+        .btn {
+            border: none;
+            font-size: inherit;
+            background: none;
+            cursor: pointer;    /* mouse style */
+            padding: 25px 80px;
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+            outline: none;
+            position: relative;
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+
+        .btn-3d {
+            background: #85ADAD;
+            color: #fff;
+            box-shadow: 0 6px #5C8A8A;
+            -webkit-transition: none;
+            -moz-transition: none;
+            transition: none;
+        }
+
+        .btn-3d {
+            border-radius: 10px;
+        }
+
+        .btn-3d:hover {
+            background: #47D1FF;
+            box-shadow: 0 8px #29A3CC;
+            top: -2px;
+        }
+
+        .btn-3d:active {
+            box-shadow: 0 0 #5C8A8A;
+            top: 6px;
+        }
+    </style>
+</head>
+<body>
+    <a href="https://www.google.com" class="btn btn-3d" target="_blank">Button</a>
+</body>
+</html>
