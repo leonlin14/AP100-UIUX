@@ -37,7 +37,10 @@
             
             // Weather Icons
             switch (response.weather[0].main) {
-                case "Clouds": obj.weatherIcon = "wi-day-cloudy";
+                case "Clouds": 
+                    obj.weatherIcon = "wi-day-cloudy";
+                    var curWeather='#FFE066';
+                    break;
             }
             
             // Celsius
@@ -54,6 +57,12 @@
             var date = new Date();
             var day  = date.getDay(); // or "new Date().getDay()";
             $('#week').text (day_list[day]);
+            
+            //weather icon color
+            $('.icon').css({"color": curWeather});
+            
+            //long shadow
+
             
 	    },
 	    complete: function(jqXHR, textStatus) {
