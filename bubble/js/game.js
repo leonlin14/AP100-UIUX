@@ -33,10 +33,29 @@ var gameModule = (function() {
         ballY = Math.floor(Math.random() * maxHeight);
         ballR = Math.floor(Math.random() * maxR) + 30;
 
-        ctx.fillStyle = 'black';
+        
+        
         ctx.beginPath();
+        ctx.fillStyle = '#33CCFF';
         ctx.arc(ballX, ballY, ballR, 0, Math.PI * 2, true);
         ctx.fill();
+        
+        //light point
+        ctx.beginPath() ;
+        ctx.shadowColor = "33CCFF" ;
+        ctx.lineCap = "round";
+        ctx.arc(ballX, ballY, ballR / 1.5,  1*Math.PI, 1.2*Math.PI, false) ;
+        ctx.lineWidth = ballR / 5;
+        ctx.strokeStyle = "#FFFFFF";
+        ctx.stroke();
+        
+        //light line
+        ctx.beginPath() ;
+        ctx.lineCap = "round";
+        ctx.arc(ballX, ballY, ballR / 1.5,  1.3*Math.PI, 1.32*Math.PI, false) ;
+        ctx.lineWidth = ballR / 5;
+        ctx.strokeStyle = "#FFFFFF";
+        ctx.stroke();
 
         $("#game").on('click', function(event) {
             touchEvent(event);
