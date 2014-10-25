@@ -31,6 +31,7 @@
             
             obj.temp = response.main.temp;
             obj.humidity = response.main.humidity;
+            obj.name = response.name;
             
             // Weather Icons
             switch (response.weather[0].main) {
@@ -44,7 +45,14 @@
             
 			$('#postTemplate')
 				.tmpl(data)
-				.appendTo('#content');            
+				.appendTo('#content');
+            
+            //week
+            var day_list = ['Sun', 'Mon', 'Tus', 'Wen', 'Thu', 'Fri', 'Sat'];
+            var date = new Date();
+            var day  = date.getDay(); // or "new Date().getDay()";
+            $('#week').text (day_list[day]);
+            
 	    },
 	    complete: function(jqXHR, textStatus) {
             $('#board').createWebSocket({

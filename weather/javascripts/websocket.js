@@ -25,7 +25,7 @@
             if (typeof(cb.onmessage) === 'function') {
                 cb.onmessage();
             }
-        };    
+        };
     }; 
 }) ($);
 
