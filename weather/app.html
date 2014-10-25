@@ -21,7 +21,7 @@
         .weather {
             margin: auto;
             width: 320px;
-            height: 560px;
+            height: 500px;
             background-image: url("img/cloudyDay.png");
             overflow: hidden;
         }
@@ -29,7 +29,7 @@
             width: inherit;
             height: inherit;
         }
-        .wIcon, .celsius, .city {
+        .wIcon, .celsius, .city, .humidity {
             float: left;
             height: auto;
         }
@@ -44,9 +44,13 @@
             font-size: 10em;
         }
         .celsius {
-            margin-left: 20%;
+            margin-left: 24%;
             font-size: 3em;
             color: #FFFFFF;
+        }
+        .humidity {
+            margin-left: 14%;
+            margin-bottom: 0;
         }
     </style>
 </head>
@@ -57,7 +61,10 @@
         <div class="wIcon">
             <i class="wi ${weatherIcon} icon"></i>
         </div>
-        <p class="celsius"><span id="week" style="margin-right:20px;"></span> ${celsius}℃</p>
+        <p class="celsius"><span id="week" style="margin-right:20px;"></span> ${celsius}<i class="wi wi-celsius"></i></p>
+        <h2 class="humidity"><i class="wi wi-sprinkles"></i> ${humidity} %</h2>
+        <h2 class="humidity"><i class="fa fa-umbrella" style="font-size:0.7em; vertical-align: top; padding-top:5px;"></i> ${clouds} %</h2>
+        <h2 class="humidity"><i class="wi wi-strong-wind" style="font-size:0.7em; vertical-align: top; padding-top:5px;"></i> ${speed} m/s</h2>
     </script>
 
     <div class="container">

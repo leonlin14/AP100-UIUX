@@ -32,6 +32,8 @@
             obj.temp = response.main.temp;
             obj.humidity = response.main.humidity;
             obj.name = response.name;
+            obj.clouds = response.clouds.all;
+            obj.speed = response.wind.speed;  
             
             // Weather Icons
             switch (response.weather[0].main) {
