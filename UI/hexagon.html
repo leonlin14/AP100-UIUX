@@ -13,16 +13,39 @@ To change this template use Tools | Templates.
             position: relative;
             margin:100px 100px;
             text-align:center;
-
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            border-radius: 10px; 
+            
             float: left;
           }
+        .hex1 .corner1-1, .hex1 .corner1-2 {
+            position: absolute;
+            top:0;
+            left:0;
+            width: 100%;
+            height: 100%;
+            background: inherit;
+            z-index: -2;
+            overflow: hidden;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            border-radius: 10px; 
+        }
+        .hex1 .corner1-1 {
+            z-index: -1;
+            -webkit-transform: rotate(60deg);
+        }
+        .hex1 .corner1-2 {
+            z-index: -1;
+            -webkit-transform: rotate(-60deg);
+        }
     </style>
 </head>
 <body>
     <div class="hex1">   
         <div class="inner">
-          <a href="#">
-          </a>
+          <a href="#"></a>
         </div>    
 
         <div class="corner1-1"></div>

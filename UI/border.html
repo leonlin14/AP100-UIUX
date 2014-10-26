@@ -9,14 +9,36 @@ To change this template use Tools | Templates.
         .box {
           margin: 50px 100px;
           width: 0;
-          border-top: 30px solid #C66;
-          border-bottom: 30px solid #6C6;
-          border-left: 30px solid #66C;
-          border-right: 30px solid #CC6;
+          border-top: 40px solid #C66;
+          border-bottom: 40px solid #6C6;
+          border-left: 40px solid #66C;
+          border-right: 40px solid #CC6;
+        }
+        .home {
+            position: relative;
+            margin: 100px;
+            display: block;
+            width: 250px;
+            height: 100px;
+            background-color: #0099FF;
+            -webkit-border-radius: 100%;
+            border-radius: 100%;
+            
+        }
+        .home:before {
+            position: absolute;
+            content: "";
+            left: 60px;
+            top: 34px;
+            border-top: 20px solid transparent;
+            border-bottom: 50px solid transparent;
+            border-left: 175px solid #0099FF;
+            border-right: 25px solid transparent;
         }
     </style>
 </head>
 <body>
     <div class="box"></div>
+    <div class="home"><p style="color: #ffffff; margin: 120px;">wedjqwidji</p></div>
 </body>
 </html>
