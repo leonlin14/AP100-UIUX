@@ -54,6 +54,33 @@
         transform: rotate(-45deg);
     }
     
+    /*
+      grid
+    */
+    .grid-button { position: absolute; left: 35%; top: 25%; }
+    .grid-button {
+      padding: 1.4em;
+      cursor: pointer;
+      user-select: none;
+    }
+    .grid-button .grid {
+      width: 1em;
+      height: 1em;
+      background: #ecf0f1;
+      color: #ecf0f1;
+      /* Not in use when the colors are specified below */
+      transition: 0.3s;
+    }
+    .grid-button:hover .grid {
+      -webkit-transform: rotate3d(0, 0, 1, -45deg);
+      transform: rotate3d(0, 0, 1, -45deg);
+    }
+    .grid-button.rearrange .grid{
+      box-shadow: -1.4em -1.4em, 0 -1.4em, 1.4em -1.4em, -1.4em 0, 1.4em 0, -1.4em 1.4em, 0 1.4em, 1.4em 1.4em;
+    }
+    .grid-button:hover .grid {
+      box-shadow: 0 -1em, 0 -2em, 1em 0, -2em 0, 2em 0, -1em 0, 0 2em, 0 1em;
+    }
   </style>
 </head>
 
@@ -61,7 +88,10 @@
   <button class="nav-toggle" href="#">
     <span class="line"></span>
   </button>
-    
+  <button class="grid-button rearrange">
+    <span class="grid"></span>
+  </button>  
+  
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
   <script>
       $(document).ready(function(){
