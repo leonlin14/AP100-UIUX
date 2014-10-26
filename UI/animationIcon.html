@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Animation Icon</title>
+  <style>  
+    body { background-color: black; height: 100%; }
+    button {
+      display: inline-block;
+      margin: 0 1em;
+      border: none;
+      background: none;
+    }
+    button span {
+      display: block;
+    }
+
+    /*
+      line
+    */
+    .nav-toggle { position: absolute; left: 15%; top: 25%; }
+    .nav-toggle .line, .nav-toggle .line:before, .nav-toggle .line:after {
+      cursor: pointer;
+      border-radius: 1px;
+      height: 5px;
+      width: 45px;
+      background: white;
+      position: absolute;
+      display: block;
+      content: '';
+    }
+    .nav-toggle .line:before {
+        top: -13px;
+    }
+    .nav-toggle .line:after {
+        bottom: -13px;
+    }
+    .nav-toggle .line, .nav-toggle .line:before, .nav-toggle .line:after {
+        -webkit-transition: all 200ms ease-in-out;
+        transition: all 200ms ease-in-out;
+    }
+    .nav-toggle.close .line {
+        background-color: transparent;
+    }
+    .nav-toggle.close .line:before, .nav-toggle.close .line:after {
+        top: 0;
+    }
+    .nav-toggle.close .line:before {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+    .nav-toggle.close .line:after {
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+    
+  </style>
+</head>
+
+<body>
+  <button class="nav-toggle" href="#">
+    <span class="line"></span>
+  </button>
+    
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script>
+      $(document).ready(function(){
+        $(".nav-toggle").click(function(){
+          $(".nav-toggle").toggleClass("close");
+        });
+      });
+  </script>
+
+</body>
+</html>
