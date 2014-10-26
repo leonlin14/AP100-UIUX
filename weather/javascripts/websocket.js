@@ -3,7 +3,7 @@
     $.fn.createWebSocket = function(cb) {
         var self = this;
         
-        var ws = new WebSocket("ws://localhost:3000/", "echo-protocol"); 
+        var ws = new WebSocket("ws:beach-amadeus.codio.io:3000/", "echo-protocol"); 
         ws.onopen = function(evt) {
              $('[data-status]').addClass('hide');
              $('[data-status=success]').removeClass('hide');

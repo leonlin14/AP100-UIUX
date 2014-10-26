@@ -10,7 +10,7 @@
         $.ajax({
             dataType: 'json',
             type: 'POST',
-            url: 'http://localhost:3000/send/' + message,
+            url: 'http://beach-amadeus.codio.io:3000/send/' + message,
             complete: function(jqXHR, textStatus) {
                  $('[data-status]').addClass('hide');
                  $('[data-status=sent]').removeClass('hide'); 

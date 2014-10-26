@@ -1,7 +1,7 @@
 (function($) {
 	$.ajax({
 		dataType: 'json',
-		url: 'http://localhost:3000/start',
+		url: 'http://beach-amadeus.codio.io:3000/start',
 	    success: function(response, jqXHR, textStatus) {
             //Dirty:
             // for (i = 0; i < response.data.length; i++) {
